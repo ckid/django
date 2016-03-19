@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block mainbody %}
+    <form action="/west/investigate/" method="post">
+    {% csrf_token %}
+    <input type="text" name="staff">
+    <input class="btn btn-dange" type="submit" value="Submmit">
+    </form>
+    {% for item in staff %}
+        <p>{{ item }}</p>
+    {% endfor %}
+{% endblock %}

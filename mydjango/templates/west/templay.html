@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{%  block mainbody%}
+<h1>{{ label }}</h1>
+<p style="background-color: black">
+    The staff of the Holl is as fallow:
+</p >
+<h2>{{ staff }}</h2>
+{% for item in staffs %}
+    {% if item.id = 2 %}
+        <p>{{ item.id }}, {{ item }}</p>
+    {% endif %}
+{% endfor %}
+{% endblock %}
